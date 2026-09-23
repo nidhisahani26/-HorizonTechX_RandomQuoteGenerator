@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>✨ Random Quote Generator - HorizonTechX</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>✨ Random Quote Generator</h1>
+            <p>Get inspired with wisdom and motivation</p>
+        </div>
+        
+        <div class="categories">
+            <button class="category-btn active" data-category="all">All</button>
+            <button class="category-btn" data-category="inspirational">Inspirational</button>
+            <button class="category-btn" data-category="success">Success</button>
+            <button class="category-btn" data-category="wisdom">Wisdom</button>
+        </div>
+        
+        <div class="quote-box">
+            <p class="quote-text" id="quoteText">Loading...</p>
+            <p class="quote-author" id="quoteAuthor"></p>
+        </div>
+        
+        <div class="actions">
+            <button class="btn btn-primary" id="newQuoteBtn">🔄 New Quote</button>
+            <button class="btn btn-secondary" id="copyBtn">📋 Copy</button>
+            <button class="btn btn-secondary" id="tweetBtn">𝕏 Tweet</button>
+        </div>
+        
+        <div class="counter">
+            Quote <span id="quoteCounter">1</span> of <span id="totalQuotes">10</span>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
