@@ -1,161 +1,60 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>💬 Random Quote Generator</title>
 
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-}
+    <link rel="stylesheet" href="style.css">
+</head>
 
-.container {
-    background: white;
-    border-radius: 20px;
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-    max-width: 600px;
-    width: 100%;
-    padding: 40px;
-    text-align: center;
-}
+<body>
 
-.header {
-    margin-bottom: 30px;
-}
+    <div class="container">
 
-.header h1 {
-    color: #f5576c;
-    font-size: 32px;
-    margin-bottom: 10px;
-}
+        <div class="header">
+            <h1>💬 Random Quote Generator</h1>
+            <p>Daily inspiration at your fingertips ✨</p>
+        </div>
 
-.header p {
-    color: #999;
-    font-size: 14px;
-}
+        <div class="content">
 
-.categories {
-    display: flex;
-    gap: 10px;
-    margin-bottom: 20px;
-    flex-wrap: wrap;
-    justify-content: center;
-}
+            <div class="category-btns">
+                <button class="category-btn active" data-cat="All">All</button>
+                <button class="category-btn" data-cat="Motivation">Motivation</button>
+                <button class="category-btn" data-cat="Success">Success</button>
+                <button class="category-btn" data-cat="Wisdom">Wisdom</button>
+                <button class="category-btn" data-cat="Life">Life</button>
+            </div>
 
-.category-btn {
-    padding: 8px 16px;
-    border: 2px solid #f5576c;
-    background: white;
-    color: #f5576c;
-    border-radius: 20px;
-    cursor: pointer;
-    font-size: 12px;
-    font-weight: 600;
-    transition: all 0.3s ease;
-}
+            <div class="card">
+                <p id="quoteText"></p>
+                <p id="quoteAuthor"></p>
+                <span id="quoteCat"></span>
+            </div>
 
-.category-btn.active {
-    background: #f5576c;
-    color: white;
-}
+            <div class="button-group">
+                <button id="newQuoteBtn" class="btn btn-primary">
+                    🎲 New Quote
+                </button>
 
-.category-btn:hover {
-    transform: translateY(-2px);
-}
+                <button id="favBtn" class="btn btn-secondary">
+                    🤍 Favorite
+                </button>
 
-.quote-box {
-    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-    color: white;
-    border-radius: 15px;
-    padding: 40px 30px;
-    margin-bottom: 30px;
-    box-shadow: 0 10px 30px rgba(245, 87, 108, 0.3);
-    min-height: 200px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    animation: fadeIn 0.5s ease;
-}
+                <button id="copyBtn" class="btn btn-secondary">
+                    📋 Copy
+                </button>
 
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(10px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
+                <button id="tweetBtn" class="btn btn-secondary">
+                    𝕏 Tweet
+                </button>
+            </div>
 
-.quote-text {
-    font-size: 24px;
-    font-weight: 600;
-    margin-bottom: 20px;
-    line-height: 1.6;
-}
+        </div>
+    </div>
 
-.quote-author {
-    font-size: 16px;
-    font-style: italic;
-    opacity: 0.9;
-}
+    <script src="script.js"></script>
 
-.actions {
-    display: flex;
-    gap: 10px;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-.btn {
-    padding: 12px 20px;
-    border: none;
-    border-radius: 8px;
-    font-size: 14px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.btn-primary {
-    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-    color: white;
-    flex: 1;
-    min-width: 150px;
-}
-
-.btn-primary:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(245, 87, 108, 0.4);
-}
-
-.btn-secondary {
-    background: #f0f0f0;
-    color: #333;
-}
-
-.btn-secondary:hover {
-    background: #e0e0e0;
-}
-
-.counter {
-    font-size: 12px;
-    color: #999;
-    margin-top: 20px;
-}
-
-@media (max-width: 600px) {
-    .quote-text {
-        font-size: 18px;
-    }
-    
-    .quote-author {
-        font-size: 14px;
-    }
-}
+</body>
+</html>
