@@ -1,41 +1,60 @@
-<!DOCTYPE html>
+  <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>✨ Random Quote Generator - HorizonTechX</title>
+    <title>💬 Random Quote Generator</title>
+
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+
     <div class="container">
+
         <div class="header">
-            <h1>✨ Random Quote Generator</h1>
-            <p>Get inspired with wisdom and motivation</p>
+            <h1>💬 Random Quote Generator</h1>
+            <p>Daily inspiration at your fingertips ✨</p>
         </div>
-        
-        <div class="categories">
-            <button class="category-btn active" data-category="all">All</button>
-            <button class="category-btn" data-category="inspirational">Inspirational</button>
-            <button class="category-btn" data-category="success">Success</button>
-            <button class="category-btn" data-category="wisdom">Wisdom</button>
-        </div>
-        
-        <div class="quote-box">
-            <p class="quote-text" id="quoteText">Loading...</p>
-            <p class="quote-author" id="quoteAuthor"></p>
-        </div>
-        
-        <div class="actions">
-            <button class="btn btn-primary" id="newQuoteBtn">🔄 New Quote</button>
-            <button class="btn btn-secondary" id="copyBtn">📋 Copy</button>
-            <button class="btn btn-secondary" id="tweetBtn">𝕏 Tweet</button>
-        </div>
-        
-        <div class="counter">
-            Quote <span id="quoteCounter">1</span> of <span id="totalQuotes">10</span>
+
+        <div class="content">
+
+            <div class="category-btns">
+                <button class="category-btn active" data-cat="All">All</button>
+                <button class="category-btn" data-cat="Motivation">Motivation</button>
+                <button class="category-btn" data-cat="Success">Success</button>
+                <button class="category-btn" data-cat="Wisdom">Wisdom</button>
+                <button class="category-btn" data-cat="Life">Life</button>
+            </div>
+
+            <div class="card">
+                <p id="quoteText"></p>
+                <p id="quoteAuthor"></p>
+                <span id="quoteCat"></span>
+            </div>
+
+            <div class="button-group">
+                <button id="newQuoteBtn" class="btn btn-primary">
+                    🎲 New Quote
+                </button>
+
+                <button id="favBtn" class="btn btn-secondary">
+                    🤍 Favorite
+                </button>
+
+                <button id="copyBtn" class="btn btn-secondary">
+                    📋 Copy
+                </button>
+
+                <button id="tweetBtn" class="btn btn-secondary">
+                    𝕏 Tweet
+                </button>
+            </div>
+
         </div>
     </div>
-    
+
     <script src="script.js"></script>
+
 </body>
 </html>
